@@ -61,7 +61,7 @@ Type::hook('*', function($raw, Type $type, $path) {
 
 Type::hook('_String', function($raw, Type $type, $path) {
 	if ($raw === '')
-		return;
+		return null;
 //	http://stackoverflow.com/questions/9545336/php-match-control-characters-but-not-whitespace/9545636#9545636
 //	http://stackoverflow.com/questions/1497885/remove-control-characters-from-php-string/23066553#23066553
 //	http://www.regular-expressions.info/unicode.html#category
@@ -97,11 +97,11 @@ Type::hook('_String', function($raw, Type $type, $path) {
 		$type->class[] = '_SQL';
 
 	// _JSON
-	else if ($raw{0} == '{' && $json = json_decode($raw)) {
+	else if ($raw[0] == '{' && $json = json_decode($raw)) {
 		$type->class[] = '_JSON\_Object';
 		$type->inter = $json;
 	}
-	else if ($raw{0} == '[' && $json = json_decode($raw)) {
+	else if ($raw[0] == '[' && $json = json_decode($raw)) {
 		$type->class[] = '_JSON\_Array';
 		$type->inter = $json;
 	}
