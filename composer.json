@@ -1,6 +1,6 @@
 {
-    "name": "leeoniya/dump-r",
-    "description": "a cleaner, leaner mix of print_r() and var_dump()",
+    "name": "noze2k/dump-r",
+    "description": "a cleaner, leaner mix of print_r() and var_dump() [ Forked from leeoniya/dump-r ]",
     "keywords": ["print_r", "var_dump", "debug", "pretty", "print", "dump"],
     "type": "library",
     "homepage": "https://github.com/leeoniya/dump_r.php",
@@ -11,7 +11,13 @@
             "email": "leeoniya@gmail.com",
             "homepage": "https://github.com/leeoniya",
             "role": "Developer"
-        }
+        },{
+			"name": "noze",
+			"email": "noze@gmx.de",
+			"homepage": "https://github.com/noze2k",
+			"role": "Developer"
+		}
+
     ],
     "require": {
         "php": ">=7.4",
