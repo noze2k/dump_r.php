@@ -14,8 +14,10 @@
         }
     ],
     "require": {
-        "php": ">=7.4"
-    },
+        "php": ">=7.4",
+		"ext-json": "*",
+		"ext-simplexml": "*"
+	},
     "suggest": {
         "jdorn/sql-formatter": "Pretty-print dumped SQL strings"
     },
